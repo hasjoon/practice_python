@@ -209,46 +209,64 @@ score = [1, 2, 3, 1, 2, 3, 1]
 # k = 최상품 사과 점수
 # m = 사과 상자에 담기는 개수
 
-def solution(k, m, score):
+# def solution(k, m, score):
+#     answer = 0
+#     qu = len(score)//m
+#     print(f'qu = {qu}')
+#     score.sort()
+#     arr = []
+#     for i in range(qu):
+#         print(f'i = {i}')
+#         for j in range(m): 
+#             print(f'j = {j}')
+#             arr.append(score.pop(-1))
+#             print(f'arr2 = {arr}')
+#             print(f'score2 = {score}')
+#         arr.sort()
+#         answer += arr[0]*m
+#         print(f'arr[0]!=k {answer}')
+#         # if 
+#         #     answer += k*m
+#         #     print(f'arr[0]=k {answer}')
+#     return answer
+
+# def solution(k, m, score):
+#     score_count = [0]
+
+
+
+# # answer = 4/3
+# # print(int(answer))
+
+
+# def solution2(k, m, score):
+#     score.sort(reverse=True)
+#     print(score)
+#     print(len(score))
+#     answer = 0
+#     for i in range(0, len(score)-m+1, m):
+#         min_in_box = min(score[i:i+m])
+#         print(f'{i}번째 : {min_in_box}') 
+#         answer += min_in_box * m
+#         print(answer)
+#     return answer
+
+# print(solution2(4, 3, [4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2]))
+
+
+absolutes =  [4,7,12]
+signs = ['true','false','true']
+
+def solution(absolutes, signs):
     answer = 0
-    qu = len(score)//m
-    print(f'qu = {qu}')
-    score.sort()
-    arr = []
-    for i in range(qu):
-        print(f'i = {i}')
-        for j in range(m): 
-            print(f'j = {j}')
-            arr.append(score.pop(-1))
-            print(f'arr2 = {arr}')
-            print(f'score2 = {score}')
-        arr.sort()
-        answer += arr[0]*m
-        print(f'arr[0]!=k {answer}')
-        # if 
-        #     answer += k*m
-        #     print(f'arr[0]=k {answer}')
+    for i in range(len(absolutes)):
+        if signs[i] == 'true':
+            answer = answer + absolutes[i]
+            print(f'true : {answer}')
+        if signs[i] == 'false':
+            answer = answer - absolutes[i]
+            print(f'false : {answer}')
+        print(f'return : {answer}')
     return answer
 
-def solution(k, m, score):
-    score_count = [0]
-
-
-
-# answer = 4/3
-# print(int(answer))
-
-
-def solution2(k, m, score):
-    score.sort(reverse=True)
-    print(score)
-    print(len(score))
-    answer = 0
-    for i in range(0, len(score)-m+1, m):
-        min_in_box = min(score[i:i+m])
-        print(f'{i}번째 : {min_in_box}') 
-        answer += min_in_box * m
-        print(answer)
-    return answer
-
-print(solution2(4, 3, [4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2]))
+print(solution(absolutes, signs))
