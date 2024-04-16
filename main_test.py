@@ -254,19 +254,41 @@ score = [1, 2, 3, 1, 2, 3, 1]
 # print(solution2(4, 3, [4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2]))
 
 
-absolutes =  [4,7,12]
-signs = ['true','false','true']
+# absolutes =  [4,7,12]
+# signs = ['true','false','true']
 
-def solution(absolutes, signs):
+# def solution(absolutes, signs):
+#     answer = 0
+#     for i in range(len(absolutes)):
+#         if signs[i] == 'true':
+#             answer = answer + absolutes[i]
+#             print(f'true : {answer}')
+#         if signs[i] == 'false':
+#             answer = answer - absolutes[i]
+#             print(f'false : {answer}')
+#         print(f'return : {answer}')
+#     return answer
+
+# print(solution(absolutes, signs))
+
+
+def solution(left, right):
     answer = 0
-    for i in range(len(absolutes)):
-        if signs[i] == 'true':
-            answer = answer + absolutes[i]
-            print(f'true : {answer}')
-        if signs[i] == 'false':
-            answer = answer - absolutes[i]
-            print(f'false : {answer}')
-        print(f'return : {answer}')
+    factor = 0
+    for i in range((right-left)+1): #뺀값 = 5
+        # print(f'range i: {(right-left)+1}')
+        for j in range(left):
+            # print(f'range j:{left+1+i}')
+            if ((left+i)%(j+1) == 0):
+                print(f'left+i: {left+i}')
+                print(f'j+1: {j+1}')
+                factor += 1
+        print(f'left: {left+i}')
+        print(f'factor: {factor}')
+        if (factor%2 !=0):
+            answer -= left
+        if (factor%2 ==0):
+            answer += left
     return answer
 
-print(solution(absolutes, signs))
+# print(10%0)
