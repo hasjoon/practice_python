@@ -275,20 +275,39 @@ score = [1, 2, 3, 1, 2, 3, 1]
 # 4/16-1/17
 # 약수의 개수와덧셈
 # 풀이시간 1시간
-def solution(left, right):
+# def solution(left, right):
+#     answer = 0
+#     for i in range((right-left)+1):
+#         factor = 0
+#         for j in range(left+i):
+#             if ((left+i)%(j+1) == 0):
+#                 print(f'left+i: {left+i}')
+#                 print(f'j+1: {j+1}')
+#                 factor += 1
+#                 print(f'factor ==0: {factor}')
+#         print(f'left: {left+i}')
+#         print(f'factor: {factor}')
+#         if (factor%2 !=0):
+#             answer -= (left+i)
+#         if (factor%2 ==0):   
+#             answer += (left+i)
+#     return answer
+
+
+# 스택과 큐에 관련된 문제
+# 같은숫자는 싫어
+# 4/17 
+def solution(arr):
+    answer = []
+    answer.append(arr[0])
+    for i in range(1, len(arr)):
+        if (arr[i-1] != arr[i]):
+            answer.append(arr[i])
+    return answer
+
+
+# 숫자 문자열과 영단어 - kakao 채용연계형 인턴쉽
+# 4/17
+def solution(s):
     answer = 0
-    for i in range((right-left)+1):
-        factor = 0
-        for j in range(left+i):
-            if ((left+i)%(j+1) == 0):
-                print(f'left+i: {left+i}')
-                print(f'j+1: {j+1}')
-                factor += 1
-                print(f'factor ==0: {factor}')
-        print(f'left: {left+i}')
-        print(f'factor: {factor}')
-        if (factor%2 !=0):
-            answer -= (left+i)
-        if (factor%2 ==0):   
-            answer += (left+i)
     return answer
