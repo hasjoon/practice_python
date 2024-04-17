@@ -272,23 +272,23 @@ score = [1, 2, 3, 1, 2, 3, 1]
 # print(solution(absolutes, signs))
 
 
+# 4/16-1/17
+# 약수의 개수와덧셈
+# 풀이시간 1시간
 def solution(left, right):
     answer = 0
-    factor = 0
-    for i in range((right-left)+1): #뺀값 = 5
-        # print(f'range i: {(right-left)+1}')
-        for j in range(left):
-            # print(f'range j:{left+1+i}')
+    for i in range((right-left)+1):
+        factor = 0
+        for j in range(left+i):
             if ((left+i)%(j+1) == 0):
                 print(f'left+i: {left+i}')
                 print(f'j+1: {j+1}')
                 factor += 1
+                print(f'factor ==0: {factor}')
         print(f'left: {left+i}')
         print(f'factor: {factor}')
         if (factor%2 !=0):
-            answer -= left
-        if (factor%2 ==0):
-            answer += left
+            answer -= (left+i)
+        if (factor%2 ==0):   
+            answer += (left+i)
     return answer
-
-# print(10%0)
