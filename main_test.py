@@ -317,57 +317,69 @@ def solution(s):
     for i in range(len(s)+1):
         if s[i:i+1].isalpha():
             if s[i:i+1] == 'z':
+                print(s[i:i+1])
                 answer += '0'
                 print(f'0: {answer}')
                 i +=4
-                print(f'0i: {answer}')
+                print(f'0i: {i}')
             if s[i:i+1] == 'o':
+                print(s[i:i+1])
                 answer += '1'
                 print(f'1: {answer}')
                 i +=3
-                print(f'1i: {answer}')
+                print(f'1i: {i}')
             if s[i:i+2] == 'tw':
+                print(s[i:i+1])
                 answer += '2'
                 print(f'2: {answer}')
                 i +=3
-                print(f'2i: {answer}')
+                print(f'2i: {i}')
             if s[i:i+2] == 'th':
+                print(s[i:i+1])
                 answer += '3'
                 print(f'3: {answer}')
                 i +=5
-                print(f'3i: {answer}')
+                print(f'3i: {i}')
             if s[i:i+2] == 'fo':
+                print(s[i:i+1])
                 answer += '4'
                 print(f'4: {answer}')
                 i +=4
-                print(f'4i: {answer}')
+                print(f'4i: {i}')
             if s[i:i+2] == 'fi':
+                print(s[i:i+1])
                 answer += '5'
                 print(f'5: {answer}')
                 i +=4
-                print(f'5i: {answer}')
+                print(f'5i: {i}')
             if s[i:i+2] == 'si':
+                print(s[i:i+1])
                 answer += '6'
                 print(f'6: {answer}')
                 i +=3
-                print(f'6i: {answer}')
+                print(f'6i: {i}')
             if s[i:i+2] == 'se':
+                print(s[i:i+1])
                 answer += '7'
                 print(f'7: {answer}')
                 i +=5
-                print(f'7i: {answer}')
+                print(f'7i: {i}')
             if s[i:i+2] == 'e':
+                print(s[i:i+1])
                 answer += '8'
                 print(f'8: {answer}')
                 i +=5
-                print(f'8i: {answer}')
+                print(f'8i: {i}')
             if s[i:i+2] == 'n':
+                print(s[i:i+1])
                 answer += '9'
                 print(f'9: {answer}')
                 i +=4
-                print(f'9i: {answer}')
+                print(f'9i: {i}')
         if s[i:i+1].isdigit():
+            print(s[i:i+1])
             answer += s[i:i+1]
             print(f'num: {answer}')
-            print(f'numi: {answer}')
-    return answer
+            i +=1
+            print(f'numi: {i}')
+    return int(answer)
