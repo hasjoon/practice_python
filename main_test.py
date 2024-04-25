@@ -309,77 +309,81 @@ score = [1, 2, 3, 1, 2, 3, 1]
 # 숫자 문자열과 영단어 - kakao 채용연계형 인턴쉽
 # 4/17
 
-number_dic_en = {0:"zero", 1:"one", 2:"two", 3:"three", 4:"four",5:"five",6:"six",7:"seven",8:"eight",9:"nine"}
-zero2
-
+# number_dic_en = {0:"zero", 1:"one", 2:"two", 3:"three", 4:"four",5:"five",6:"six",7:"seven",8:"eight",9:"nine"}
+# zero2
+s ="23four5six7"
 def solution(s):
     answer = ""
     for i in range(len(s)+1):
-        if s[i:i+1].isalpha():
-            if s[i:i+1] == 'z':
+        print(f'for {i}')
+        print(f'for start num or alp: {s[i:i+1]}')
+        if s[i:i+1].isalpha() == True:
+            if s[i:i+2] == 'ze':
                 print(s[i:i+1])
                 answer += '0'
                 print(f'0: {answer}')
                 i +=4
                 print(f'0i: {i}')
-            if s[i:i+1] == 'o':
+            elif s[i:i+2] == 'on':
                 print(s[i:i+1])
                 answer += '1'
                 print(f'1: {answer}')
                 i +=3
                 print(f'1i: {i}')
-            if s[i:i+2] == 'tw':
+            elif s[i:i+2] == 'tw':
                 print(s[i:i+1])
                 answer += '2'
                 print(f'2: {answer}')
                 i +=3
                 print(f'2i: {i}')
-            if s[i:i+2] == 'th':
+            elif s[i:i+2] == 'th':
                 print(s[i:i+1])
                 answer += '3'
                 print(f'3: {answer}')
                 i +=5
                 print(f'3i: {i}')
-            if s[i:i+2] == 'fo':
+            elif s[i:i+2] == 'fo':
                 print(s[i:i+1])
                 answer += '4'
                 print(f'4: {answer}')
                 i +=4
                 print(f'4i: {i}')
-            if s[i:i+2] == 'fi':
+            elif s[i:i+2] == 'fi':
                 print(s[i:i+1])
                 answer += '5'
                 print(f'5: {answer}')
                 i +=4
                 print(f'5i: {i}')
-            if s[i:i+2] == 'si':
+            elif s[i:i+2] == 'si':
                 print(s[i:i+1])
                 answer += '6'
                 print(f'6: {answer}')
                 i +=3
                 print(f'6i: {i}')
-            if s[i:i+2] == 'se':
+            elif s[i:i+2] == 'se':
                 print(s[i:i+1])
                 answer += '7'
                 print(f'7: {answer}')
                 i +=5
                 print(f'7i: {i}')
-            if s[i:i+2] == 'e':
+            elif s[i:i+2] == 'ei':
                 print(s[i:i+1])
                 answer += '8'
                 print(f'8: {answer}')
                 i +=5
                 print(f'8i: {i}')
-            if s[i:i+2] == 'n':
+            elif s[i:i+2] == 'ni':
                 print(s[i:i+1])
                 answer += '9'
                 print(f'9: {answer}')
                 i +=4
                 print(f'9i: {i}')
-        if s[i:i+1].isdigit():
+        elif s[i:i+1].isdigit() == True:
             print(s[i:i+1])
             answer += s[i:i+1]
-            print(f'num: {answer}')
+            print(f'num answer: {answer}')
             i +=1
             print(f'numi: {i}')
     return int(answer)
+
+print(solution(s))
